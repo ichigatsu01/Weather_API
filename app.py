@@ -7,10 +7,14 @@ from streamlit_folium import st_folium
 # とりあえず日本の真ん中くらいの場所を固定しておく。
 map = folium.Map(location=(35, 135), zoom_start=5, min_zoom=4, control_scale=True)
 
-# config.jsonによけたAPI_keyの取得
-with open('config.json', mode='r', encoding='utf-8') as f:
-    jsonfile = json.loads(f.read())
-API_key = jsonfile['API_key']
+# config.jsonによけたAPI_keyの取得 -> streamlitのsecretに対応
+if "key" in st.secrets:
+    API_key = st.secrets["key"]
+else:
+    with open('config.json', mode='r', encoding='utf-8') as f:
+        jsonfile = json.loads(f.read())
+        API_key = jsonfile['API_key']
+
 
 with open('location.json', mode='r', encoding='utf-8') as f:
     selected_cities = json.loads(f.read())
