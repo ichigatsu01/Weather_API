@@ -61,5 +61,6 @@ for city in cities_add_weather:
         icon=icon
     ).add_to(map)
 
-st.title("日本の現在天気マップ")
+st.title("現在時刻の天気")
+st.markdown("🖱️ 各都市のアイコンをクリックすると、詳細な天気情報が表示されます。")
 st_data = st_folium(map, width=900, height=600)
