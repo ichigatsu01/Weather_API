@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_1af7352605f5399de416858a452af628 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_1af7352605f5399de416858a452af628" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_1af7352605f5399de416858a452af628 = L.map(
+                "map_1af7352605f5399de416858a452af628",
+                {
+                    center: [35.0, 135.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 5,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_1af7352605f5399de416858a452af628);
+
+            
+
+        
+    
+            var tile_layer_57e371384b35a7f33a5b3d4170560f72 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 4,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_57e371384b35a7f33a5b3d4170560f72.addTo(map_1af7352605f5399de416858a452af628);
+        
+    
+            var marker_8b81c357c77d16ca877f42d595b50b95 = L.marker(
+                [45.4158108, 141.6730309],
+                {
+}
+            ).addTo(map_1af7352605f5399de416858a452af628);
+        
+    
+        var custom_icon_1103dd924855e0b1f8d3a857bcddb62a = L.icon({
+  "iconUrl": "https://openweathermap.org/img/wn/04n@2x.png",
+  "iconSize": [75, 75],
+  "iconAnchor": [50, 50],
+});
+        marker_8b81c357c77d16ca877f42d595b50b95.setIcon(custom_icon_1103dd924855e0b1f8d3a857bcddb62a);
+        
+    
+        var popup_caa74098f01da1e4f0eecb602fcd2763 = L.popup({
+  "maxWidth": 300,
+  "offset": [0, -20],
+});
+
+        
+            
+                var html_478bb066b87940ed8b1faca7ae90c873 = $(`<div id="html_478bb066b87940ed8b1faca7ae90c873" style="width: 100.0%; height: 100.0%;"><ul style="list-style: none; text-align: left; font-size: large;">                <li>都市名：稚内市</li>                <li>天気：厚い雲</li>                <li>体感気温：10.93℃</li>                <li>湿度：82％</li>                <li>気圧：1014hPa</li>            </ul></div>`)[0];
+                popup_caa74098f01da1e4f0eecb602fcd2763.setContent(html_478bb066b87940ed8b1faca7ae90c873);
+            
+        
+
+        marker_8b81c357c77d16ca877f42d595b50b95.bindPopup(popup_caa74098f01da1e4f0eecb602fcd2763)
+        ;
+
+        
+    
+    
+            marker_8b81c357c77d16ca877f42d595b50b95.bindTooltip(
+                `<div>
+                     稚内市
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8b81c357c77d16ca877f42d595b50b95.setIcon(custom_icon_1103dd924855e0b1f8d3a857bcddb62a);
+            
+    
+            var marker_2c67d8fc15fc8a6e420bc7196c43ff73 = L.marker(
+                [43.061936, 141.3542924],
+                {
+}
+            ).addTo(map_1af7352605f5399de416858a452af628);
+        
+    
+        var custom_icon_8990803929965a4643ef02556ed9d46f = L.icon({
+  "iconUrl": "https://openweathermap.org/img/wn/04n@2x.png",
+  "iconSize": [75, 75],
+  "iconAnchor": [50, 50],
+});
+        marker_2c67d8fc15fc8a6e420bc7196c43ff73.setIcon(custom_icon_8990803929965a4643ef02556ed9d46f);
+        
+    
+        var popup_1730c3b8ba86f7b2f17abcf6ae60a82f = L.popup({
+  "maxWidth": 300,
+  "offset": [0, -20],
+});
+
+        
+            
+                var html_645067cdfabd82649ded657bb7df0b7d = $(`<div id="html_645067cdfabd82649ded657bb7df0b7d" style="width: 100.0%; height: 100.0%;"><ul style="list-style: none; text-align: left; font-size: large;">                <li>都市名：札幌市</li>                <li>天気：厚い雲</li>                <li>体感気温：14.24℃</li>                <li>湿度：71％</li>                <li>気圧：1016hPa</li>            </ul></div>`)[0];
+                popup_1730c3b8ba86f7b2f17abcf6ae60a82f.setContent(html_645067cdfabd82649ded657bb7df0b7d);
+            
+        
+
+        marker_2c67d8fc15fc8a6e420bc7196c43ff73.bindPopup(popup_1730c3b8ba86f7b2f17abcf6ae60a82f)
+        ;
+
+        
+    
+    
+            marker_2c67d8fc15fc8a6e420bc7196c43ff73.bindTooltip(
+                `<div>
+                     札幌市
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2c67d8fc15fc8a6e420bc7196c43ff73.setIcon(custom_icon_8990803929965a4643ef02556ed9d46f);
+            
+    
+            var marker_a0251675ce146d0035983d089aae0f45 = L.marker(
+                [38.2677554, 140.8691498],
+                {
+}
+            ).addTo(map_1af7352605f5399de416858a452af628);
+        
+    
+        var custom_icon_b1bfbc3b925690d37a591810fa0e763d = L.icon({
+  "iconUrl": "https://openweathermap.org/img/wn/04n@2x.png",
+  "iconSize": [75, 75],
+  "iconAnchor": [50, 50],
+});
+        marker_a0251675ce146d0035983d089aae0f45.setIcon(custom_icon_b1bfbc3b925690d37a591810fa0e763d);
+        
+    
+        var popup_c068ce1e50dd65b2aec88caedb5334bb = L.popup({
+  "maxWidth": 300,
+  "offset": [0, -20],
+});
+
+        
+            
+                var html_aa7825b8ffab1cf24d2b7ad18936611a = $(`<div id="html_aa7825b8ffab1cf24d2b7ad18936611a" style="width: 100.0%; height: 100.0%;"><ul style="list-style: none; text-align: left; font-size: large;">                <li>都市名：仙台市</li>                <li>天気：厚い雲</li>                <li>体感気温：15.25℃</li>                <li>湿度：89％</li>                <li>気圧：1020hPa</li>            </ul></div>`)[0];
+                popup_c068ce1e50dd65b2aec88caedb5334bb.setContent(html_aa7825b8ffab1cf24d2b7ad18936611a);
+            
+        
+
+        marker_a0251675ce146d0035983d089aae0f45.bindPopup(popup_c068ce1e50dd65b2aec88caedb5334bb)
+        ;
+
+        
+    
+    
+            marker_a0251675ce146d0035983d089aae0f45.bindTooltip(
+                `<div>
+                     仙台市
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a0251675ce146d0035983d089aae0f45.setIcon(custom_icon_b1bfbc3b925690d37a591810fa0e763d);
+            
+    
+            var marker_18e95d1bf14174850a5739cc4d942b02 = L.marker(
+                [37.9160769, 139.0365006],
+                {
+}
+            ).addTo(map_1af7352605f5399de416858a452af628);
+        
+    
+        var custom_icon_e3e19ff0b6b0db3162522b15ee7250fb = L.icon({
+  "iconUrl": "https://openweathermap.org/img/wn/04n@2x.png",
+  "iconSize": [75, 75],
+  "iconAnchor": [50, 50],
+});
+        marker_18e95d1bf14174850a5739cc4d942b02.setIcon(custom_icon_e3e19ff0b6b0db3162522b15ee7250fb);
+        
+    
+        var popup_2724387b2afef71c3057dced697f6065 = L.popup({
+  "maxWidth": 300,
+  "offset": [0, -20],
+});
+
+        
+            
+                var html_80b3218c69571517b369571fca4e930a = $(`<div id="html_80b3218c69571517b369571fca4e930a" style="width: 100.0%; height: 100.0%;"><ul style="list-style: none; text-align: left; font-size: large;">                <li>都市名：新潟市</li>                <li>天気：厚い雲</li>                <li>体感気温：17.22℃</li>                <li>湿度：69％</li>                <li>気圧：1020hPa</li>            </ul></div>`)[0];
+                popup_2724387b2afef71c3057dced697f6065.setContent(html_80b3218c69571517b369571fca4e930a);
+            
+        
+
+        marker_18e95d1bf14174850a5739cc4d942b02.bindPopup(popup_2724387b2afef71c3057dced697f6065)
+        ;
+
+        
+    
+    
+            marker_18e95d1bf14174850a5739cc4d942b02.bindTooltip(
+                `<div>
+                     新潟市
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_18e95d1bf14174850a5739cc4d942b02.setIcon(custom_icon_e3e19ff0b6b0db3162522b15ee7250fb);
+            
+    
+            var marker_32b6c1dc66ae1ee685d11678c3614314 = L.marker(
+                [35.6768601, 139.7638947],
+                {
+}
+            ).addTo(map_1af7352605f5399de416858a452af628);
+        
+    
+        var custom_icon_98c64ea4bbb8baa6483120a15f033164 = L.icon({
+  "iconUrl": "https://openweathermap.org/img/wn/04n@2x.png",
+  "iconSize": [75, 75],
+  "iconAnchor": [50, 50],
+});
+        marker_32b6c1dc66ae1ee685d11678c3614314.setIcon(custom_icon_98c64ea4bbb8baa6483120a15f033164);
+        
+    
+        var popup_92f68e947c6cf649ed87716c2a54b60c = L.popup({
+  "maxWidth": 300,
+  "offset": [0, -20],
+});
+
+        
+            
+                var html_b5fd9ef3739614c045349855f7c73598 = $(`<div id="html_b5fd9ef3739614c045349855f7c73598" style="width: 100.0%; height: 100.0%;"><ul style="list-style: none; text-align: left; font-size: large;">                <li>都市名：東京都</li>                <li>天気：厚い雲</li>                <li>体感気温：21.07℃</li>                <li>湿度：77％</li>                <li>気圧：1020hPa</li>            </ul></div>`)[0];
+                popup_92f68e947c6cf649ed87716c2a54b60c.setContent(html_b5fd9ef3739614c045349855f7c73598);
+            
+        
+
+        marker_32b6c1dc66ae1ee685d11678c3614314.bindPopup(popup_92f68e947c6cf649ed87716c2a54b60c)
+        ;
+
+        
+    
+    
+            marker_32b6c1dc66ae1ee685d11678c3614314.bindTooltip(
+                `<div>
+                     東京都
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_32b6c1dc66ae1ee685d11678c3614314.setIcon(custom_icon_98c64ea4bbb8baa6483120a15f033164);
+            
+    
+            var marker_029dd8c7d6596c6788e0e49e4b0f6222 = L.marker(
+                [36.561627, 136.6568822],
+                {
+}
+            ).addTo(map_1af7352605f5399de416858a452af628);
+        
+    
+        var custom_icon_7d161b8cf204287b0bfacaf62164dbdc = L.icon({
+  "iconUrl": "https://openweathermap.org/img/wn/04n@2x.png",
+  "iconSize": [75, 75],
+  "iconAnchor": [50, 50],
+});
+        marker_029dd8c7d6596c6788e0e49e4b0f6222.setIcon(custom_icon_7d161b8cf204287b0bfacaf62164dbdc);
+        
+    
+        var popup_f7d58a663cca72704a3fb17bf33706df = L.popup({
+  "maxWidth": 300,
+  "offset": [0, -20],
+});
+
+        
+            
+                var html_b8a9d370f34c110ea4e797742a13abe0 = $(`<div id="html_b8a9d370f34c110ea4e797742a13abe0" style="width: 100.0%; height: 100.0%;"><ul style="list-style: none; text-align: left; font-size: large;">                <li>都市名：金沢市</li>                <li>天気：厚い雲</li>                <li>体感気温：18.4℃</li>                <li>湿度：72％</li>                <li>気圧：1019hPa</li>            </ul></div>`)[0];
+                popup_f7d58a663cca72704a3fb17bf33706df.setContent(html_b8a9d370f34c110ea4e797742a13abe0);
+            
+        
+
+        marker_029dd8c7d6596c6788e0e49e4b0f6222.bindPopup(popup_f7d58a663cca72704a3fb17bf33706df)
+        ;
+
+        
+    
+    
+            marker_029dd8c7d6596c6788e0e49e4b0f6222.bindTooltip(
+                `<div>
+                     金沢市
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_029dd8c7d6596c6788e0e49e4b0f6222.setIcon(custom_icon_7d161b8cf204287b0bfacaf62164dbdc);
+            
+    
+            var marker_2f48347999535219a6f72c7af4d2ba27 = L.marker(
+                [36.6485851, 138.1947664],
+                {
+}
+            ).addTo(map_1af7352605f5399de416858a452af628);
+        
+    
+        var custom_icon_413f9da5891712ac922a1633cce29082 = L.icon({
+  "iconUrl": "https://openweathermap.org/img/wn/04n@2x.png",
+  "iconSize": [75, 75],
+  "iconAnchor": [50, 50],
+});
+        marker_2f48347999535219a6f72c7af4d2ba27.setIcon(custom_icon_413f9da5891712ac922a1633cce29082);
+        
+    
+        var popup_5e7721ed55c24df8e43899e33b26ea52 = L.popup({
+  "maxWidth": 300,
+  "offset": [0, -20],
+});
+
+        
+            
+                var html_9e6138d695af698615a83addb616f024 = $(`<div id="html_9e6138d695af698615a83addb616f024" style="width: 100.0%; height: 100.0%;"><ul style="list-style: none; text-align: left; font-size: large;">                <li>都市名：長野市</li>                <li>天気：厚い雲</li>                <li>体感気温：15.75℃</li>                <li>湿度：81％</li>                <li>気圧：1021hPa</li>            </ul></div>`)[0];
+                popup_5e7721ed55c24df8e43899e33b26ea52.setContent(html_9e6138d695af698615a83addb616f024);
+            
+        
+
+        marker_2f48347999535219a6f72c7af4d2ba27.bindPopup(popup_5e7721ed55c24df8e43899e33b26ea52)
+        ;
+
+        
+    
+    
+            marker_2f48347999535219a6f72c7af4d2ba27.bindTooltip(
+                `<div>
+                     長野市
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2f48347999535219a6f72c7af4d2ba27.setIcon(custom_icon_413f9da5891712ac922a1633cce29082);
+            
+    
+            var marker_c4c2d6be44121e154b18dfcc7cfbce69 = L.marker(
+                [34.6937569, 135.5014539],
+                {
+}
+            ).addTo(map_1af7352605f5399de416858a452af628);
+        
+    
+        var custom_icon_78fcf941e1f0b364e9d6312edfcc4397 = L.icon({
+  "iconUrl": "https://openweathermap.org/img/wn/04n@2x.png",
+  "iconSize": [75, 75],
+  "iconAnchor": [50, 50],
+});
+        marker_c4c2d6be44121e154b18dfcc7cfbce69.setIcon(custom_icon_78fcf941e1f0b364e9d6312edfcc4397);
+        
+    
+        var popup_a3565e2c1a880fad33687763efec1217 = L.popup({
+  "maxWidth": 300,
+  "offset": [0, -20],
+});
+
+        
+            
+                var html_982ee5565b31c0e983f6882093b34aab = $(`<div id="html_982ee5565b31c0e983f6882093b34aab" style="width: 100.0%; height: 100.0%;"><ul style="list-style: none; text-align: left; font-size: large;">                <li>都市名：大阪市</li>                <li>天気：厚い雲</li>                <li>体感気温：25.58℃</li>                <li>湿度：62％</li>                <li>気圧：1020hPa</li>            </ul></div>`)[0];
+                popup_a3565e2c1a880fad33687763efec1217.setContent(html_982ee5565b31c0e983f6882093b34aab);
+            
+        
+
+        marker_c4c2d6be44121e154b18dfcc7cfbce69.bindPopup(popup_a3565e2c1a880fad33687763efec1217)
+        ;
+
+        
+    
+    
+            marker_c4c2d6be44121e154b18dfcc7cfbce69.bindTooltip(
+                `<div>
+                     大阪市
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c4c2d6be44121e154b18dfcc7cfbce69.setIcon(custom_icon_78fcf941e1f0b364e9d6312edfcc4397);
+            
+    
+            var marker_9592d2ee4ddf9d62ce07c4c346ecc907 = L.marker(
+                [34.4857039, 133.3623097],
+                {
+}
+            ).addTo(map_1af7352605f5399de416858a452af628);
+        
+    
+        var custom_icon_b3b4b2326a9b0ec9937ce29761f5da3d = L.icon({
+  "iconUrl": "https://openweathermap.org/img/wn/04n@2x.png",
+  "iconSize": [75, 75],
+  "iconAnchor": [50, 50],
+});
+        marker_9592d2ee4ddf9d62ce07c4c346ecc907.setIcon(custom_icon_b3b4b2326a9b0ec9937ce29761f5da3d);
+        
+    
+        var popup_613a89393176273889ac189496d12032 = L.popup({
+  "maxWidth": 300,
+  "offset": [0, -20],
+});
+
+        
+            
+                var html_f008761921fbc690aa82257a0cad483e = $(`<div id="html_f008761921fbc690aa82257a0cad483e" style="width: 100.0%; height: 100.0%;"><ul style="list-style: none; text-align: left; font-size: large;">                <li>都市名：福山市</li>                <li>天気：厚い雲</li>                <li>体感気温：18.7℃</li>                <li>湿度：78％</li>                <li>気圧：1020hPa</li>            </ul></div>`)[0];
+                popup_613a89393176273889ac189496d12032.setContent(html_f008761921fbc690aa82257a0cad483e);
+            
+        
+
+        marker_9592d2ee4ddf9d62ce07c4c346ecc907.bindPopup(popup_613a89393176273889ac189496d12032)
+        ;
+
+        
+    
+    
+            marker_9592d2ee4ddf9d62ce07c4c346ecc907.bindTooltip(
+                `<div>
+                     福山市
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9592d2ee4ddf9d62ce07c4c346ecc907.setIcon(custom_icon_b3b4b2326a9b0ec9937ce29761f5da3d);
+            
+    
+            var marker_2e4bffd55f713a9e1016b466f05b1ed9 = L.marker(
+                [33.5680384, 133.5394221],
+                {
+}
+            ).addTo(map_1af7352605f5399de416858a452af628);
+        
+    
+        var custom_icon_5fb7be73b966926c6304de0854bef80b = L.icon({
+  "iconUrl": "https://openweathermap.org/img/wn/04n@2x.png",
+  "iconSize": [75, 75],
+  "iconAnchor": [50, 50],
+});
+        marker_2e4bffd55f713a9e1016b466f05b1ed9.setIcon(custom_icon_5fb7be73b966926c6304de0854bef80b);
+        
+    
+        var popup_4e4f3c67087d3e5c29921e4b4fa5545a = L.popup({
+  "maxWidth": 300,
+  "offset": [0, -20],
+});
+
+        
+            
+                var html_511bf858bf116ebefadaf518157a4266 = $(`<div id="html_511bf858bf116ebefadaf518157a4266" style="width: 100.0%; height: 100.0%;"><ul style="list-style: none; text-align: left; font-size: large;">                <li>都市名：高知市</li>                <li>天気：厚い雲</li>                <li>体感気温：17.87℃</li>                <li>湿度：85％</li>                <li>気圧：1021hPa</li>            </ul></div>`)[0];
+                popup_4e4f3c67087d3e5c29921e4b4fa5545a.setContent(html_511bf858bf116ebefadaf518157a4266);
+            
+        
+
+        marker_2e4bffd55f713a9e1016b466f05b1ed9.bindPopup(popup_4e4f3c67087d3e5c29921e4b4fa5545a)
+        ;
+
+        
+    
+    
+            marker_2e4bffd55f713a9e1016b466f05b1ed9.bindTooltip(
+                `<div>
+                     高知市
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2e4bffd55f713a9e1016b466f05b1ed9.setIcon(custom_icon_5fb7be73b966926c6304de0854bef80b);
+            
+    
+            var marker_f0f6fbeffa8edc32cffea80863a357df = L.marker(
+                [33.5898988, 130.4017509],
+                {
+}
+            ).addTo(map_1af7352605f5399de416858a452af628);
+        
+    
+        var custom_icon_0b842baf45b38c2ec23713a93d00b95e = L.icon({
+  "iconUrl": "https://openweathermap.org/img/wn/04n@2x.png",
+  "iconSize": [75, 75],
+  "iconAnchor": [50, 50],
+});
+        marker_f0f6fbeffa8edc32cffea80863a357df.setIcon(custom_icon_0b842baf45b38c2ec23713a93d00b95e);
+        
+    
+        var popup_30badbe8ce7fece4ec8527273913e9c8 = L.popup({
+  "maxWidth": 300,
+  "offset": [0, -20],
+});
+
+        
+            
+                var html_05510c8b1cd9b4c177e951c360fc235d = $(`<div id="html_05510c8b1cd9b4c177e951c360fc235d" style="width: 100.0%; height: 100.0%;"><ul style="list-style: none; text-align: left; font-size: large;">                <li>都市名：福岡市</li>                <li>天気：厚い雲</li>                <li>体感気温：22.25℃</li>                <li>湿度：23％</li>                <li>気圧：1018hPa</li>            </ul></div>`)[0];
+                popup_30badbe8ce7fece4ec8527273913e9c8.setContent(html_05510c8b1cd9b4c177e951c360fc235d);
+            
+        
+
+        marker_f0f6fbeffa8edc32cffea80863a357df.bindPopup(popup_30badbe8ce7fece4ec8527273913e9c8)
+        ;
+
+        
+    
+    
+            marker_f0f6fbeffa8edc32cffea80863a357df.bindTooltip(
+                `<div>
+                     福岡市
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f0f6fbeffa8edc32cffea80863a357df.setIcon(custom_icon_0b842baf45b38c2ec23713a93d00b95e);
+            
+    
+            var marker_e4fec1de4224fbf578468340a0741d43 = L.marker(
+                [31.5841689, 130.543387],
+                {
+}
+            ).addTo(map_1af7352605f5399de416858a452af628);
+        
+    
+        var custom_icon_3a585dc2c269cd5c363ef0e27a06e56d = L.icon({
+  "iconUrl": "https://openweathermap.org/img/wn/04n@2x.png",
+  "iconSize": [75, 75],
+  "iconAnchor": [50, 50],
+});
+        marker_e4fec1de4224fbf578468340a0741d43.setIcon(custom_icon_3a585dc2c269cd5c363ef0e27a06e56d);
+        
+    
+        var popup_e39e5a1c91c65bb2d5f0526c4e447e33 = L.popup({
+  "maxWidth": 300,
+  "offset": [0, -20],
+});
+
+        
+            
+                var html_254ae5e8ab4fafcfdfaddfec24706e5a = $(`<div id="html_254ae5e8ab4fafcfdfaddfec24706e5a" style="width: 100.0%; height: 100.0%;"><ul style="list-style: none; text-align: left; font-size: large;">                <li>都市名：鹿児島市</li>                <li>天気：厚い雲</li>                <li>体感気温：21.51℃</li>                <li>湿度：85％</li>                <li>気圧：1020hPa</li>            </ul></div>`)[0];
+                popup_e39e5a1c91c65bb2d5f0526c4e447e33.setContent(html_254ae5e8ab4fafcfdfaddfec24706e5a);
+            
+        
+
+        marker_e4fec1de4224fbf578468340a0741d43.bindPopup(popup_e39e5a1c91c65bb2d5f0526c4e447e33)
+        ;
+
+        
+    
+    
+            marker_e4fec1de4224fbf578468340a0741d43.bindTooltip(
+                `<div>
+                     鹿児島市
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e4fec1de4224fbf578468340a0741d43.setIcon(custom_icon_3a585dc2c269cd5c363ef0e27a06e56d);
+            
+    
+            var marker_bf66f81c05f722d251212c92dbfe8613 = L.marker(
+                [26.2122345, 127.6791452],
+                {
+}
+            ).addTo(map_1af7352605f5399de416858a452af628);
+        
+    
+        var custom_icon_a050354c7faa8de3589c423b7c18c5bf = L.icon({
+  "iconUrl": "https://openweathermap.org/img/wn/01n@2x.png",
+  "iconSize": [75, 75],
+  "iconAnchor": [50, 50],
+});
+        marker_bf66f81c05f722d251212c92dbfe8613.setIcon(custom_icon_a050354c7faa8de3589c423b7c18c5bf);
+        
+    
+        var popup_d500ef0cdb92bcc956972b53ff7df035 = L.popup({
+  "maxWidth": 300,
+  "offset": [0, -20],
+});
+
+        
+            
+                var html_895a2040023ce32bd252ce988ae6ba84 = $(`<div id="html_895a2040023ce32bd252ce988ae6ba84" style="width: 100.0%; height: 100.0%;"><ul style="list-style: none; text-align: left; font-size: large;">                <li>都市名：那覇市</li>                <li>天気：晴天</li>                <li>体感気温：25.92℃</li>                <li>湿度：91％</li>                <li>気圧：1016hPa</li>            </ul></div>`)[0];
+                popup_d500ef0cdb92bcc956972b53ff7df035.setContent(html_895a2040023ce32bd252ce988ae6ba84);
+            
+        
+
+        marker_bf66f81c05f722d251212c92dbfe8613.bindPopup(popup_d500ef0cdb92bcc956972b53ff7df035)
+        ;
+
+        
+    
+    
+            marker_bf66f81c05f722d251212c92dbfe8613.bindTooltip(
+                `<div>
+                     那覇市
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_bf66f81c05f722d251212c92dbfe8613.setIcon(custom_icon_a050354c7faa8de3589c423b7c18c5bf);
+            
+    
+            var marker_d19ae81eac46e9f9dc538dd56b1ae242 = L.marker(
+                [35.1851045, 136.8998438],
+                {
+}
+            ).addTo(map_1af7352605f5399de416858a452af628);
+        
+    
+        var custom_icon_a2305493e51a753331ecbd36ba1a5d66 = L.icon({
+  "iconUrl": "https://openweathermap.org/img/wn/04n@2x.png",
+  "iconSize": [75, 75],
+  "iconAnchor": [50, 50],
+});
+        marker_d19ae81eac46e9f9dc538dd56b1ae242.setIcon(custom_icon_a2305493e51a753331ecbd36ba1a5d66);
+        
+    
+        var popup_5fea9a3ccc1745d68631189cc0d59378 = L.popup({
+  "maxWidth": 300,
+  "offset": [0, -20],
+});
+
+        
+            
+                var html_542e251ad7c019594172969cbe8da6af = $(`<div id="html_542e251ad7c019594172969cbe8da6af" style="width: 100.0%; height: 100.0%;"><ul style="list-style: none; text-align: left; font-size: large;">                <li>都市名：名古屋市</li>                <li>天気：厚い雲</li>                <li>体感気温：21.02℃</li>                <li>湿度：67％</li>                <li>気圧：1021hPa</li>            </ul></div>`)[0];
+                popup_5fea9a3ccc1745d68631189cc0d59378.setContent(html_542e251ad7c019594172969cbe8da6af);
+            
+        
+
+        marker_d19ae81eac46e9f9dc538dd56b1ae242.bindPopup(popup_5fea9a3ccc1745d68631189cc0d59378)
+        ;
+
+        
+    
+    
+            marker_d19ae81eac46e9f9dc538dd56b1ae242.bindTooltip(
+                `<div>
+                     名古屋市
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d19ae81eac46e9f9dc538dd56b1ae242.setIcon(custom_icon_a2305493e51a753331ecbd36ba1a5d66);
+            
+    
+            var marker_1a37088b56a54ac5545e182e366bc4eb = L.marker(
+                [40.8221517, 140.7471238],
+                {
+}
+            ).addTo(map_1af7352605f5399de416858a452af628);
+        
+    
+        var custom_icon_a03654e7748dc744f9e1dc98cd553e4e = L.icon({
+  "iconUrl": "https://openweathermap.org/img/wn/04n@2x.png",
+  "iconSize": [75, 75],
+  "iconAnchor": [50, 50],
+});
+        marker_1a37088b56a54ac5545e182e366bc4eb.setIcon(custom_icon_a03654e7748dc744f9e1dc98cd553e4e);
+        
+    
+        var popup_d1a696626562d4c5d289389a8c2e9908 = L.popup({
+  "maxWidth": 300,
+  "offset": [0, -20],
+});
+
+        
+            
+                var html_918b18697696e37b0ced26da8d5cfa60 = $(`<div id="html_918b18697696e37b0ced26da8d5cfa60" style="width: 100.0%; height: 100.0%;"><ul style="list-style: none; text-align: left; font-size: large;">                <li>都市名：青森市</li>                <li>天気：厚い雲</li>                <li>体感気温：16.72℃</li>                <li>湿度：73％</li>                <li>気圧：1018hPa</li>            </ul></div>`)[0];
+                popup_d1a696626562d4c5d289389a8c2e9908.setContent(html_918b18697696e37b0ced26da8d5cfa60);
+            
+        
+
+        marker_1a37088b56a54ac5545e182e366bc4eb.bindPopup(popup_d1a696626562d4c5d289389a8c2e9908)
+        ;
+
+        
+    
+    
+            marker_1a37088b56a54ac5545e182e366bc4eb.bindTooltip(
+                `<div>
+                     青森市
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1a37088b56a54ac5545e182e366bc4eb.setIcon(custom_icon_a03654e7748dc744f9e1dc98cd553e4e);
+            
+    
+            var marker_45e5653f2fc2465f36fb8cc2e80d239d = L.marker(
+                [35.468115, 133.048768],
+                {
+}
+            ).addTo(map_1af7352605f5399de416858a452af628);
+        
+    
+        var custom_icon_ea0289e1a5f21898ce4c214b1761f07c = L.icon({
+  "iconUrl": "https://openweathermap.org/img/wn/04n@2x.png",
+  "iconSize": [75, 75],
+  "iconAnchor": [50, 50],
+});
+        marker_45e5653f2fc2465f36fb8cc2e80d239d.setIcon(custom_icon_ea0289e1a5f21898ce4c214b1761f07c);
+        
+    
+        var popup_15ba8ea8688a4b27138394fe04cf2350 = L.popup({
+  "maxWidth": 300,
+  "offset": [0, -20],
+});
+
+        
+            
+                var html_7e02a523ad8f78b7d02a2dbcb8ec0d87 = $(`<div id="html_7e02a523ad8f78b7d02a2dbcb8ec0d87" style="width: 100.0%; height: 100.0%;"><ul style="list-style: none; text-align: left; font-size: large;">                <li>都市名：松江市</li>                <li>天気：厚い雲</li>                <li>体感気温：18.9℃</li>                <li>湿度：82％</li>                <li>気圧：1019hPa</li>            </ul></div>`)[0];
+                popup_15ba8ea8688a4b27138394fe04cf2350.setContent(html_7e02a523ad8f78b7d02a2dbcb8ec0d87);
+            
+        
+
+        marker_45e5653f2fc2465f36fb8cc2e80d239d.bindPopup(popup_15ba8ea8688a4b27138394fe04cf2350)
+        ;
+
+        
+    
+    
+            marker_45e5653f2fc2465f36fb8cc2e80d239d.bindTooltip(
+                `<div>
+                     松江市
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_45e5653f2fc2465f36fb8cc2e80d239d.setIcon(custom_icon_ea0289e1a5f21898ce4c214b1761f07c);
+            
+</script>
+</html>
