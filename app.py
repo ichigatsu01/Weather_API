@@ -3,14 +3,16 @@ import folium
 import requests
 import streamlit as st
 from streamlit_folium import st_folium
+import pprint
 
 # とりあえず日本の真ん中くらいの場所を固定しておく。
-map = folium.Map(location=(35, 135), zoom_start=5, min_zoom=4, control_scale=True)
+map = folium.Map(location=(37, 138), zoom_start=5, min_zoom=4, control_scale=True)
 
 # config.jsonによけたAPI_keyの取得 -> streamlitのsecretに対応
-if "key" in st.secrets:
+
+try:
     API_key = st.secrets["key"]
-else:
+except st.runtime.secrets.StreamlitSecretNotFoundError:
     with open('config.json', mode='r', encoding='utf-8') as f:
         jsonfile = json.loads(f.read())
         API_key = jsonfile['API_key']
@@ -19,13 +21,17 @@ else:
 with open('location.json', mode='r', encoding='utf-8') as f:
     selected_cities = json.loads(f.read())
 
+#* APIキーが過剰に消費されることを避けるため、cacheを活用する
+@st.cache_data(show_spinner='Now Loading...')
+def getInfo(u):
+    return requests.get(u).json()
+    
 cities_add_weather = []
 for city in selected_cities:
     lat = city['lat']
     lon = city['lon']
     url = f'https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API_key}&lang=ja&units=metric&units=metric'
-    jsondata = requests.get(url).json()
-    # pprint.pprint(jsondata)
+    jsondata = getInfo(url)
 
     # selected_citiesの複製を作って、そこにjsondataの内容を追加する
     city_new = dict(city)
@@ -63,4 +69,4 @@ for city in cities_add_weather:
 
 st.title("現在時刻の天気")
 st.markdown("🖱️ 各都市のアイコンをクリックすると、詳細な天気情報が表示されます。")
-st_data = st_folium(map, width=900, height=600)
+st_data = st_folium(map, width=1000, height=650)
