@@ -5,8 +5,8 @@ import streamlit as st
 from streamlit_folium import st_folium
 import pprint
 
-# とりあえず日本の真ん中くらいの場所を固定しておく。
-map = folium.Map(location=(37, 138), zoom_start=5, min_zoom=4, control_scale=True)
+# 稚内～沖縄までが映るような位置を中央に配置
+map = folium.Map(location=(38.01068651731261, 137.0361923080612), zoom_start=5, min_zoom=4, control_scale=True)
 
 # config.jsonによけたAPI_keyの取得 -> streamlitのsecretに対応
 
